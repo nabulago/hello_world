@@ -18,7 +18,7 @@ fn primitive_examples(){
     mutable = 21;
 
     //Error! The type of a variable can't be changed.
-    mutable True;
+    mutable = True;
 
     // Variables can be overwritten with shadowing    
     let mutable = True;
