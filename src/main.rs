@@ -17,8 +17,12 @@ fn primitive_examples(){
     let mut mutable = 12; // Mutable 'i32'
     mutable = 21;
 
+    // ----------------------------------------------
     //Error! The type of a variable can't be changed.
-    mutable = true; // true should be in lower case 
+    // mutable = true; // true should be in lower case
+    // Commented this part as the mutable can change values 
+    // but we are assigning the boolean value 
+    // ----------------------------------------------
 
     // Variables can be overwritten with shadowing    
     let mutable = true;
