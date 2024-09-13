@@ -11,21 +11,24 @@ fn primitive_examples(){
 
     // A type can also be inferred from context
     let mut inferred_type = 12; // Type i64 is inferred from another line.
+    println!("First inferred type variable as need mutable {}",type(inferred_type));
     inferred_type = 1234567891i64;
+    println!("First inferred type variable as after mutaion {}",type(inferred_type));
 
     // A mutable variable'svalue can be changed.
     let mut mutable = 12; // Mutable 'i32'
     mutable = 21;
-
+    println!("Mutable for the integer 32 {}",mutable);
     // ----------------------------------------------
     //Error! The type of a variable can't be changed.
     // mutable = true; // true should be in lower case
     // Commented this part as the mutable can change values 
     // but we are assigning the boolean value 
     // ----------------------------------------------
-
+    
     // Variables can be overwritten with shadowing    
     let mutable = true;
+    println!("Mutable for the Boolean redefined {}",mutable);
 
     println!("{} {} {}",logical, a_float, an_integer);
     println!("Default float{}", default_float);
