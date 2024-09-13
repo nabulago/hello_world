@@ -1,7 +1,7 @@
 use std::any::type_name;
 
 fn type_of<T>(_: &T) -> &'static str {
-    type_name::<T>(); //Checking data type need to add function as not works directly
+    type_name::<T>() //Checking data type need to add function as not works directly
 }
 
 fn primitive_examples(){
