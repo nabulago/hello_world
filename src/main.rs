@@ -1,3 +1,9 @@
+use std::any::type_name;
+
+fn type_of<T>(_: &T) -> &'static str {
+    type_name::<T>(); //Checking data type need to add function as not works directly
+}
+
 fn primitive_examples(){
 
     // Variables can be type annotated.
@@ -11,12 +17,14 @@ fn primitive_examples(){
 
     // A type can also be inferred from context
     let mut inferred_type = 12; // Type i64 is inferred from another line.
-    println!("First inferred type variable as need mutable {}",type(inferred_type));
+    println!("First inferred type variable as need mutable {}",inferred_type);
     inferred_type = 1234567891i64;
-    println!("First inferred type variable as after mutaion {}",type(inferred_type));
+    println!("First inferred type variable as after mutaion : {}",inferred_type);
+    println!("First inferred type variable as after mutaion dataatype: {}",type_of(&inferred_type));
 
     // A mutable variable'svalue can be changed.
     let mut mutable = 12; // Mutable 'i32'
+    println!("Mutable for the integer 32 {}",mutable);
     mutable = 21;
     println!("Mutable for the integer 32 {}",mutable);
     // ----------------------------------------------
@@ -39,6 +47,6 @@ fn primitive_examples(){
 fn main() {
     println!("Hello, world!");
 
-    primitive_examples()
+    primitive_examples();
 
 }
