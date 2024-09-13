@@ -18,10 +18,10 @@ fn primitive_examples(){
     mutable = 21;
 
     //Error! The type of a variable can't be changed.
-    mutable = True;
+    mutable = true; // true should be in lower case 
 
     // Variables can be overwritten with shadowing    
-    let mutable = True;
+    let mutable = true;
 
     println!("{} {} {}",logical, a_float, an_integer);
     println!("Default float{}", default_float);
